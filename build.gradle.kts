@@ -18,7 +18,7 @@ labyMod {
         namespace = "customblocks"
         displayName = "GrieferGames CustomBlocks"
         author = "GrieferGames CosmoHDx"
-        description = "Provides CustomBlocks for GrieferGames via LabyMod Fabric"
+        description = "Provides CustomBlocks for GrieferGames via LabyMod Fabric."
         minecraftVersion = "1.20<*" //"1.20<*"
         version = System.getenv().getOrDefault("VERSION", project.version.toString())
         iconUrl = "textures/icon.png"
