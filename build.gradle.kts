@@ -13,7 +13,7 @@ version = "1.0.3"
 java.toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 
 labyMod {
-    defaultPackageName = "net.griefergames.customblocks" //change this to your main package name (used by all modules)
+    defaultPackageName = "net.griefergames.customblocks" //change this to your main package name (used by all modules) xx
     addonInfo {
         namespace = "customblocks"
         displayName = "GrieferGames CustomBlocks"
