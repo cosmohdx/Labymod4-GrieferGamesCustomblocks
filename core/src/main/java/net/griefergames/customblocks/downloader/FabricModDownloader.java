@@ -101,6 +101,7 @@ public class FabricModDownloader {
       return null;
     }
     removeOlderVersions(version, versionData.versions.get(version), versionData.fileName);
+    removeOlderVersions(version, versionData.versions.get(version), versionData.oldFileName);
     return downloadFabricMod(version, versionData.versions.get(version), versionData.fileName);
   }
 

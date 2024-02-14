@@ -8,6 +8,7 @@ import java.util.Map;
 public class VersionData {
 
   public String fileName;
+  public String oldFileName;
 
   public Map<String, String> versions = new HashMap<>();
 
