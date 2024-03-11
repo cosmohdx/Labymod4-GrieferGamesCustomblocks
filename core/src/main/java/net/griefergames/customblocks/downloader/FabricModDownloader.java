@@ -145,9 +145,7 @@ public class FabricModDownloader {
   private void checkFabricPaths(String version) {
     try {
       // Create Farbic Mods part if its not existing
-      Files.createDirectories(
-          GrieferGamesCustomblockConstants.versionedPath(GrieferGamesCustomblockConstants.MODS_DIRECTORY_PATH, version)
-          , (FileAttribute<?>[])new FileAttribute[0]);
+      Files.createDirectories(GrieferGamesCustomblockConstants.MODS_DIRECTORY_PATH, (FileAttribute<?>[])new FileAttribute[0]);
     } catch (IOException exception) {
       throw new RuntimeException("Failed to create versioned mod directories", exception);
     }
@@ -189,7 +187,7 @@ public class FabricModDownloader {
    */
   private void removeOlderVersions(String mcVersion, String farbicVersion, String fileName) {
     //@TODO Change to ModLoaderRegistry when its possible within api
-    File modsDirectory = GrieferGamesCustomblockConstants.versionedPath(GrieferGamesCustomblockConstants.MODS_DIRECTORY_PATH, mcVersion).toFile();
+    File modsDirectory = GrieferGamesCustomblockConstants.MODS_DIRECTORY_PATH.toFile();
     File[] files = modsDirectory.listFiles();
     for(File file : files) {
       if(file.getName().startsWith(fileName.replace("{minecraftVersion}", mcVersion).replace("{version}", ""))) {
@@ -207,9 +205,7 @@ public class FabricModDownloader {
    * @return Notification if the download was successful
    */
   private Notification downloadFabricMod(String mcVersion, String farbicVersion, String fileName) {
-    File DOWNLOAD_AS_FILE = new File(
-    GrieferGamesCustomblockConstants.versionedPath(GrieferGamesCustomblockConstants.MODS_DIRECTORY_PATH, mcVersion)
-        .toFile(), fileName.replace("{minecraftVersion}", mcVersion).replace("{version}", farbicVersion)
+    File DOWNLOAD_AS_FILE = new File(GrieferGamesCustomblockConstants.MODS_DIRECTORY_PATH.toFile(), fileName.replace("{minecraftVersion}", mcVersion).replace("{version}", farbicVersion)
     );
     boolean success = false;
     try (BufferedInputStream in = new BufferedInputStream(getResourceAsStream("fabric-mod/"+mcVersion+".jar"))) {
@@ -248,9 +244,7 @@ public class FabricModDownloader {
    * @param fileName File Name of the Fabric Mod
    */
   private void downloadFabricAPI(String mcVersion, String fabricApiVersion, String fileName) {
-    File DOWNLOAD_AS_FILE = new File(
-        GrieferGamesCustomblockConstants.versionedPath(GrieferGamesCustomblockConstants.MODS_DIRECTORY_PATH, mcVersion)
-            .toFile(), fileName.replace("{minecraftVersion}", mcVersion).replace("{version}", fabricApiVersion)
+    File DOWNLOAD_AS_FILE = new File(GrieferGamesCustomblockConstants.MODS_DIRECTORY_PATH.toFile(), fileName.replace("{minecraftVersion}", mcVersion).replace("{version}", fabricApiVersion)
     );
     try (BufferedInputStream in = new BufferedInputStream(getResourceAsStream("fabric-mod/fabric-api/"+mcVersion+".jar"))) {
       FileOutputStream fileOutputStream = new FileOutputStream(DOWNLOAD_AS_FILE);
