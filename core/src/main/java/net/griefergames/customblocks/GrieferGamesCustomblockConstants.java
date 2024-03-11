@@ -13,18 +13,6 @@ public class GrieferGamesCustomblockConstants {
 
   public static final Path MODS_DIRECTORY_PATH = getWorkingDirectory(PlatformEnvironment.getRunningVersion());
 
-  //Constants.Files.LABYMOD_DIRECTORY.resolve("fabric");
-  //public static final String FABRIC_VERSION_PATH = FABRIC_DIRECTORY + "/%s";
-  //public static final String MODS_DIRECTORY_PATH = FABRIC_VERSION_PATH + "/mods";
-
-//  public static Path versionedPath(String path) {
-//    return versionedPath(path, PlatformEnvironment.getRunningVersion());
-//  }
-//
-//  public static Path versionedPath(String path, String version) {
-//    return Paths.get(String.format(path, new Object[] { version }), new String[0]);
-//  }
-
   public static Path getWorkingDirectory(String version) {
     String path = System.getProperty("net.labymod.fabric-dir");
     if (path == null) {
