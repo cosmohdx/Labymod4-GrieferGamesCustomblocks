@@ -5,6 +5,7 @@ plugins {
 }
 
 dependencies {
+    labyProcessor()
     labyApi("api")
 
     // If you want to use external libraries, you can do that here.

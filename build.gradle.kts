@@ -3,8 +3,8 @@ import net.labymod.gradle.core.addon.info.dependency.AddonDependency
 
 plugins {
     id("java-library")
-    id("net.labymod.gradle")
-    id("net.labymod.gradle.addon")
+    id("net.labymod.labygradle")
+    id("net.labymod.labygradle.addon")
 }
 
 group = "net.griefergames"
@@ -54,8 +54,8 @@ labyMod {
 
 subprojects {
     plugins.apply("java-library")
-    plugins.apply("net.labymod.gradle")
-    plugins.apply("net.labymod.gradle.addon")
+    plugins.apply("net.labymod.labygradle")
+    plugins.apply("net.labymod.labygradle.addon")
 
     repositories {
         maven("https://libraries.minecraft.net/")
