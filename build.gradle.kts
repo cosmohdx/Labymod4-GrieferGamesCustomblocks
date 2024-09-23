@@ -8,9 +8,9 @@ plugins {
 }
 
 group = "net.griefergames"
-version = "1.0.5"
+version = "1.0.6"
 
-java.toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+java.toolchain.languageVersion.set(JavaLanguageVersion.of(21))
 
 labyMod {
     defaultPackageName = "net.griefergames.customblocks" //change this to your main package name (used by all modules) xx
@@ -19,7 +19,7 @@ labyMod {
         displayName = "GrieferGames CustomBlocks"
         author = "GrieferGames CosmoHDx"
         description = "Provides CustomBlocks for GrieferGames via LabyMod Fabric."
-        minecraftVersion = "1.20.1,1.20.4" //"1.20<*"
+        minecraftVersion = "1.20.1,1.20.4,1.21.1" //"1.20<*"
         version = System.getenv().getOrDefault("VERSION", project.version.toString())
         iconUrl = "textures/icon.png"
         addonDependencies = mutableListOf(
@@ -34,7 +34,8 @@ labyMod {
         registerVersions(
                 "1.20.1",
                 "1.20.2",
-                "1.20.4"
+                "1.20.4",
+                "1.21.1"
         ) { version, provider ->
             configureRun(provider, version)
         }
