@@ -5,7 +5,7 @@ plugins {
 
 val versions = providers.gradleProperty("net.labymod.minecraft-versions").get().split(";")
 group = "net.griefergames"
-version = "1.0.6"
+version = "1.1.0"
 
 java.toolchain.languageVersion.set(JavaLanguageVersion.of(21))
 
