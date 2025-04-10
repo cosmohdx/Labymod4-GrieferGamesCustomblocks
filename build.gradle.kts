@@ -16,7 +16,7 @@ labyMod {
         displayName = "GrieferGames CustomBlocks"
         author = "GrieferGames CosmoHDx"
         description = "Provides CustomBlocks for GrieferGames via LabyMod Fabric."
-        minecraftVersion = "1.20.1,1.20.4,1.21.1" //"1.20<*"
+        minecraftVersion = "1.20.1,1.20.4,1.21.1,1.21.4" //"1.20<*"
         version = System.getenv().getOrDefault("VERSION", project.version.toString())
         iconUrl = "textures/icon.png"
 //        addonDependencies = mutableListOf(
